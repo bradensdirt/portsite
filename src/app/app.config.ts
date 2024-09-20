@@ -1,8 +1,7 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';  // Import the routes you've defined
 
-import { routes } from './app.routes';
-
-export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
-};
+// Provide the router configuration
+export const appConfig = [
+  provideRouter(routes),  // This is where the routes are configured
+];
