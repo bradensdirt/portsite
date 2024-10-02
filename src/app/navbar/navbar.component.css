@@ -1,0 +1,8 @@
+
+.resume-button {
+  transition: color 500ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.resume-button:hover .fill-span {
+  transition: transform 500ms ease-in-out;
+}

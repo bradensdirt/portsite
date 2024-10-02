@@ -1,12 +1,5 @@
-<nav class="bg-gray-800 p-4">
-  <ul class="flex space-x-4 text-white">
-    <li><a routerLink="/" class="hover:text-blue-300">Home</a></li>
-    <li><a routerLink="/about" class="hover:text-blue-300">About</a></li>
-    <li><a routerLink="/projects" class="hover:text-blue-300">Projects</a></li>
-    <li><a routerLink="/contact" class="hover:text-blue-300">Contact</a></li>
-    <li><a routerLink="/resume" class="hover:text-blue-300">Resume</a></li>
-  </ul>
-</nav>
+<app-navbar></app-navbar>
 
-<!-- Router outlet to load content dynamically based on the route -->
-<router-outlet></router-outlet>
+<div>
+  <router-outlet></router-outlet>
+</div>
