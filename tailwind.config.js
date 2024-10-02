@@ -10,13 +10,17 @@ module.exports = {
       zIndex: {
         1: '1',
       },
-      // Add custom durations if needed
       transitionDuration: {
         300: '300ms',
         500: '500ms',
       },
+      colors: {  // Color should be plural
+        'custom-dark': '#0D1518',
+      },
+      spacing: {  // Use 'spacing' instead of 'margin'
+        'menu': '5.125rem',
+      },
     },
   },
-  plugins: [
-  ],
+  plugins: [],
 };

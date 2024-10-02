@@ -1,100 +1,105 @@
 <div>
   <!-- Navbar -->
-  <nav class="opacity-90 z-50 sticky md:fixed top-0 md:left-1/2 md:top-8 md:-translate-x-1/2 left-0 w-full md:w-auto flex items-center gap-4 md:gap-6 rounded-none md:rounded-lg border border-neutral-700 bg-neutral-900 p-2 text-sm text-neutral-500 transition-all">
+  <nav class="opacity-80 z-50 fixed top-0 md:left-1/2 md:top-8 md:-translate-x-1/2 w-full md:w-fit flex items-center justify-between gap-2 md:gap-4 rounded-none md:rounded-lg border border-neutral-700 bg-neutral-900 p-2 md:p-1 text-sm text-neutral-500 transition-all">
     <!-- Logo Div -->
-    <div class="flex justify-between items-center w-full md:w-auto flex-shrink-0">
+    <div>
       <a [routerLink]="['/']" class="font-bold text-white">
         <img
           src="./assets/braden-logo.png"
           alt="Braden's Logo"
-          class="invert brightness-200 scale-125 h-14 md:h-16 object-contain"
+          class="invert brightness-200 h-14 md:h-12 object-contain hover:scale-105 duration-500"
+          style="min-width: 65px; min-height: 65px;"
         />
       </a>
-
-      <!-- Hamburger Menu Button (visible on small screens) -->
-      <button (click)="toggleMenu()" class="md:hidden text-white focus:outline-none mr-4">
-        <svg
-          class="h-6 w-6 transform transition-transform duration-300"
-          [ngClass]="{ 'rotate-180': menuOpen }"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          ></path>
-        </svg>
-      </button>
     </div>
 
+    <!-- Hamburger Menu Button (visible on small screens) -->
+    <button (click)="toggleMenu()" class="md:hidden text-white focus:ring-white mr-4">
+      <svg
+        class="h-6 w-6 transform transition-transform duration-300"
+        [ngClass]="{ 'rotate-180': menuOpen }"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        ></path>
+      </svg>
+    </button>
+
     <!-- Site Sections Div (Visible on large screens) -->
-    <div class="hidden md:flex flex-nowrap items-center space-x-2 md:space-x-6 pl-8 pr-8">
+    <div class="hidden md:flex flex-nowrap space-x-2 md:space-x-4 ml-4 mr-2 md:mr-6">
       <!-- About Link -->
       <a
         [routerLink]="['/about']"
-        class="relative inline-block h-[30px] leading-[30px] text-base text-[#B3B3B3] overflow-hidden transition-colors duration-500 group"
+        class="relative inline-block h-[30px] md:h-[24px] leading-[30px] md:leading-[24px] text-base md:text-sm text-[#B3B3B3] overflow-hidden transition-colors duration-500 group"
+
       >
         <span
-          class="relative block text-gray-500 transition-opacity transition-transform duration-500 z-10 group-hover:opacity-0 group-hover:-translate-y-full"
+          class="relative block text-gray-500 transition-all duration-500 z-10 group-hover:opacity-0 group-hover:-translate-y-full"
         >About</span
         >
         <span
-          class="absolute inset-0 text-white opacity-0 translate-y-full transition-opacity transition-transform duration-500 z-20 group-hover:opacity-100 group-hover:translate-y-0"
+          class="absolute inset-0 text-white opacity-0 translate-y-full transition-all duration-500 z-20 group-hover:opacity-100 group-hover:translate-y-0"
         >About</span
         >
       </a>
       <!-- Projects Link -->
       <a
         [routerLink]="['/projects']"
-        class="relative inline-block h-[30px] leading-[30px] text-base text-[#B3B3B3] overflow-hidden transition-colors duration-500 group"
+        class="relative inline-block h-[30px] md:h-[24px] leading-[30px] md:leading-[24px] text-base md:text-sm text-[#B3B3B3] overflow-hidden transition-colors duration-500 group"
+
       >
         <span
-          class="relative block text-gray-500 transition-opacity transition-transform duration-500 z-10 group-hover:opacity-0 group-hover:-translate-y-full"
+          class="relative block text-gray-500 transition-all duration-500 z-10 group-hover:opacity-0 group-hover:-translate-y-full"
         >Projects</span
         >
         <span
-          class="absolute inset-0 text-white opacity-0 translate-y-full transition-opacity transition-transform duration-500 z-20 group-hover:opacity-100 group-hover:translate-y-0"
+          class="absolute inset-0 text-white opacity-0 translate-y-full transition-all duration-500 z-20 group-hover:opacity-100 group-hover:translate-y-0"
         >Projects</span
         >
       </a>
       <!-- Photography Link -->
       <a
         [routerLink]="['/photography']"
-        class="relative inline-block h-[30px] leading-[30px] text-base text-[#B3B3B3] overflow-hidden transition-colors duration-500 group"
+        class="relative inline-block h-[30px] md:h-[24px] leading-[30px] md:leading-[24px] text-base md:text-sm text-[#B3B3B3] overflow-hidden transition-colors duration-500 group"
+
       >
         <span
-          class="relative block text-gray-500 transition-opacity transition-transform duration-500 z-10 group-hover:opacity-0 group-hover:-translate-y-full"
+          class="relative block text-gray-500 transition-all duration-500 z-10 group-hover:opacity-0 group-hover:-translate-y-full"
         >Photography</span
         >
         <span
-          class="absolute inset-0 text-white opacity-0 translate-y-full transition-opacity transition-transform duration-500 z-20 group-hover:opacity-100 group-hover:translate-y-0"
+          class="absolute inset-0 text-white opacity-0 translate-y-full transition-all duration-500 z-20 group-hover:opacity-100 group-hover:translate-y-0"
         >Photography</span
         >
       </a>
       <!-- Contact Link -->
       <a
         [routerLink]="['/contact']"
-        class="relative inline-block h-[30px] leading-[30px] text-base text-[#B3B3B3] overflow-hidden transition-colors duration-500 group"
+        class="relative inline-block h-[30px] md:h-[24px] leading-[30px] md:leading-[24px] text-base md:text-sm text-[#B3B3B3] overflow-hidden transition-colors duration-500 group"
+
       >
         <span
-          class="relative block text-gray-500 transition-opacity transition-transform duration-500 z-10 group-hover:opacity-0 group-hover:-translate-y-full"
+          class="relative block text-gray-500 transition-all duration-500 z-10 group-hover:opacity-0 group-hover:-translate-y-full"
         >Contact</span
         >
         <span
-          class="absolute inset-0 text-white opacity-0 translate-y-full transition-opacity transition-transform duration-500 z-20 group-hover:opacity-100 group-hover:translate-y-0"
+          class="absolute inset-0 text-white opacity-0 translate-y-full transition-all duration-500 z-20 group-hover:opacity-100 group-hover:translate-y-0"
         >Contact</span
         >
       </a>
     </div>
 
     <!-- Resume Button Div (Visible on large screens) -->
-    <div class="md:flex items-center mr-4">
+    <div class="hidden md:flex items-center md:ml-auto md:mr-2">
       <a
         [routerLink]="['/resume']"
-        class="resume-button relative inline-block border-2 border-gray-500 rounded-lg px-6 my-2 overflow-hidden text-gray-500 bg-transparent font-semibold leading-[50px] text-center group hover:text-black transform hover:scale-105"
+        class="resume-button relative inline-block border-2 border-gray-500 rounded-lg px-4 my-2 overflow-hidden text-gray-500 bg-transparent font-semibold text-base md:text-sm leading-[40px] md:leading-[50px] text-center group hover:text-black transform hover:scale-105"
       >
         <span class="relative z-10">Resume</span>
         <span
@@ -102,11 +107,10 @@
         ></span>
       </a>
     </div>
-
   </nav>
 
   <!-- Mobile Menu (Visible when toggled on small screens) -->
-  <div *ngIf="menuOpen" class="z-40 fixed md:hidden w-full bg-neutral-900 p-4 space-y-4">
+  <div *ngIf="menuOpen" class="z-40 fixed md:hidden w-full bg-neutral-900 p-4 space-y-4 mt-menu">
     <a [routerLink]="['/about']" class="block font-semibold text-gray-400 hover:text-white">About</a>
     <a [routerLink]="['/projects']" class="block font-semibold text-gray-400 hover:text-white"
     >Projects</a
