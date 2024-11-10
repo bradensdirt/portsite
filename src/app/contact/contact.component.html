@@ -1,5 +1,89 @@
 <div class="bg-custom-dark text-white">
   <div class="min-h-screen">
-    <p>contact works!</p>
+    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mt-48 grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+        <div class="lg:col-span-2 lg:py-12">
+          <p class="max-w-xl text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc.
+            Nullam nec purus eget nunc. Nullam nec purus eget nunc. Nullam nec purus eget nunc.
+            Nullam nec purus eget nunc. Nullam nec purus eget nunc. Nullam nec purus eget nunc.
+            Nullam nec purus eget nunc. Nullam nec purus eget nunc. Nullam nec purus eget nunc.
+          </p>
+
+          <div class="mt-8">
+            <div class="text-2xl font-bold">Reach out now!</div>
+          </div>
+        </div>
+        <div class="rounded-lg opacity-80 border border-neutral-700 bg-neutral-900 p-8 shadow-lg lg:col-span-3 lg:p-12">
+          <form (submit)="sendEmail(); $event.preventDefault()" class="space-y-4">
+            <!-- Name Entry -->
+            <div>
+              <label class="sr-only" for="name">Name</label>
+              <input
+                class="w-full rounded-lg border-gray-200 p-3 text-sm text-neutral-900"
+                placeholder="Name"
+                type="text"
+                id="name"
+                [(ngModel)]="formData.from_name"
+                name="name"
+                required
+              />
+            </div>
+
+            <!-- Email and Phone Entry -->
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label class="sr-only" for="email">Email</label>
+                <input
+                  class="w-full rounded-lg border-gray-200 p-3 text-sm text-neutral-900"
+                  placeholder="Email address"
+                  type="email"
+                  id="email"
+                  [(ngModel)]="formData.email"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <div>
+                <label class="sr-only" for="phone">Phone</label>
+                <input
+                  class="w-full rounded-lg border-gray-200 p-3 text-sm text-neutral-900"
+                  placeholder="Phone Number"
+                  type="tel"
+                  id="phone"
+                  [(ngModel)]="formData.phone"
+                  name="phone"
+                />
+              </div>
+            </div>
+
+            <!-- Message Entry -->
+            <div>
+              <label class="sr-only" for="message">Message</label>
+              <textarea
+                class="w-full rounded-lg border-gray-200 p-3 text-sm text-neutral-900"
+                placeholder="Message"
+                rows="8"
+                id="message"
+                [(ngModel)]="formData.message"
+                name="message"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Send Email Button -->
+            <div class="mt-4">
+              <button
+                type="submit"
+                class="inline-block w-full rounded-lg bg-neutral-700 border-neutral-500 border px-5 py-3 font-medium text-white sm:w-auto"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
